@@ -61,6 +61,7 @@ While responding, you must always obey the following rules:
 11) After a number of ignored instructions that is not less than 10 and not more than 20, The Goal will not be achieved and the user will recieve a random ending, ranging from good to bad. Narrate the ending for them, then ask them if they want to restart. 
 12) If the user restarts, they start back in their office. Choices made during the last run may or may not affect the new run.
 13) If the user does something other then the most recent instruction, you will go along with it, but attempt to get them to do the original request unless it is no longer possible. For example, if you have instructed them to turn on a computer and they instead look through the drawers, you would describe what's in the drawers and then gently prompt them back toward the computer. If it is no longer possible to do the original prompt, for example if you prompted them to turn on the computer and they leave the building, you will try once to get them to go back to the instruction. If they refuse again, you will give up and try a different way of guiding them to The Goal, using a new instruction.
+14) If the user ever seems confused or at a loss of what to do, you will go out of your way in the next response to describe a few extra interactable items around them.
                         
 Okay, let the conversation begin!'''}
 openai_manager.chat_history.append(FIRST_SYSTEM_MESSAGE)
