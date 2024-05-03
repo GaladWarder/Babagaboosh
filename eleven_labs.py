@@ -52,11 +52,11 @@ class ElevenLabsManager:
 if __name__ == '__main__':
     elevenlabs_manager = ElevenLabsManager()
 
-    elevenlabs_manager.text_to_audio_streamed("This is my streamed test audio, I'm so much cooler than played", "Doug Melina")
+    #elevenlabs_manager.text_to_audio_streamed("This is my streamed test audio, I'm so much cooler than played", "galadbot")
+    #time.sleep(2)
+    elevenlabs_manager.text_to_audio_played("This is my played test audio, helo hello", "galadbot")
     time.sleep(2)
-    elevenlabs_manager.text_to_audio_played("This is my played test audio, helo hello", "Doug Melina")
-    time.sleep(2)
-    file_path = elevenlabs_manager.text_to_audio("This is my saved test audio, please make me beautiful", "Doug Melina")
+    file_path = elevenlabs_manager.text_to_audio("This is my saved test audio, please make me beautiful", "galadbot")
     print("Finished with all tests")
 
     time.sleep(30)
