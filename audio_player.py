@@ -24,12 +24,12 @@ class AudioManager:
         if not pygame.mixer.get_init(): # Reinitialize mixer if needed
             pygame.mixer.init(frequency=48000, buffer=1024) 
         if play_using_music:
-            # Pygame Music can only play one file at a time
             pygame.mixer.music.load(file_path)
+            pygame.mixer.music.set_volume(self.volume)  # Set volume
             pygame.mixer.music.play()
         else:
-            # Pygame Sound lets you play multiple sounds simultaneously
-            pygame_sound = pygame.mixer.Sound(file_path) 
+            pygame_sound = pygame.mixer.Sound(file_path)
+            pygame_sound.set_volume(self.volume)  # Set volume
             pygame_sound.play()
 
         if sleep_during_playback:
@@ -91,7 +91,7 @@ class AudioManager:
 
 # TESTS
 if __name__ == '__main__':
-    audio_manager = AudioManager()
+    audio_manager = AudioManager(volume=0.8)  # Initialize AudioManager with volume set to 80%
     MP3_FILEPATH = "TestAudio_MP3.mp3"
     WAV_FILEPATH = "TestAudio_WAV.wav"
 

@@ -15,7 +15,7 @@ class ElevenLabsManager:
         print(f"\nAll ElevenLabs voices: \n{all_voices}\n")
 
     # Convert text to speech, then save it to file. Returns the file path
-    def text_to_audio(self, input_text, voice="Doug VO Only", save_as_wave=True, subdirectory=""):
+    def text_to_audio(self, input_text, voice="VO Only", save_as_wave=True, subdirectory=""):
         audio_saved = generate(
           text=input_text,
           voice=voice,
@@ -30,7 +30,7 @@ class ElevenLabsManager:
         return tts_file
 
     # Convert text to speech, then play it out loud
-    def text_to_audio_played(self, input_text, voice="Doug VO Only"):
+    def text_to_audio_played(self, input_text, voice="VO Only"):
         audio = generate(
           text=input_text,
           voice=voice,
@@ -39,7 +39,7 @@ class ElevenLabsManager:
         play(audio)
 
     # Convert text to speech, then stream it out loud (don't need to wait for full speech to finish)
-    def text_to_audio_streamed(self, input_text, voice="Doug VO Only"):
+    def text_to_audio_streamed(self, input_text, voice="VO Only"):
         audio_stream = generate(
           text=input_text,
           voice=voice,
