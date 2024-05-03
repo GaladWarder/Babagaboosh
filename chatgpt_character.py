@@ -84,7 +84,7 @@ while True:
         continue
 
     # Send question to OpenAi
-    print("Sending input to OpenAI")
+    print("Sending input and awaiting response")
     openai_result = openai_manager.chat_with_history(mic_result)
     
     # Write the results to txt file as a backup
