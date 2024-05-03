@@ -7,10 +7,9 @@ from mutagen.mp3 import MP3
 
 class AudioManager:
 
-    def __init__(self):
-        # Use higher frequency to prevent audio glitching noises
-        # Use higher buffer because why not (default is 512)
-        pygame.mixer.init(frequency=48000, buffer=1024) 
+    def __init__(self, volume=0.8):
+        pygame.mixer.init(frequency=48000, buffer=1024)
+        self.volume = volume #allow for volume control 
 
     def play_audio(self, file_path, sleep_during_playback=True, delete_file=False, play_using_music=True):
         """
