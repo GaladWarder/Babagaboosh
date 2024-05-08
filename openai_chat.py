@@ -43,7 +43,7 @@ class OpenAiManager:
             print("The length of this chat question is too large for the GPT model")
             return
 
-        print("[yellow]\nAsking ChatGPT a question...")
+        print("[yellow]\nAwaiting response...")
         completion = self.client.chat.completions.create(
           model="gpt-4",
           messages=chat_question
@@ -69,7 +69,7 @@ class OpenAiManager:
             self.chat_history.pop(1) # We skip the 1st message since it's the system message
             print(f"Popped a message! New token length is: {num_tokens_from_messages(self.chat_history)}")
 
-        print("[yellow]\nAsking ChatGPT a question...")
+        print("[yellow]\nAwaiting response...")
         completion = self.client.chat.completions.create(
           model="gpt-4",
           messages=self.chat_history
