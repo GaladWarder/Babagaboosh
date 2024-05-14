@@ -95,13 +95,13 @@ while True:
     elevenlabs_output = elevenlabs_manager.text_to_audio(openai_result, ELEVENLABS_VOICE, False)
 
     # Enable the picture of the character in OBS
-    # obswebsockets_manager.set_source_visibility("*** Mid Monitor", "Pajama Sam", True)
+    # obswebsockets_manager.set_source_visibility("*** Mid Monitor", "image name", True)
 
     # Play the mp3 file
     audio_manager.play_audio(elevenlabs_output, True, True, True)
 
     # Disable character pic in OBS
-    # obswebsockets_manager.set_source_visibility("*** Mid Monitor", "Pajama Sam", False)
+    # obswebsockets_manager.set_source_visibility("*** Mid Monitor", "image name", False)
 
     print("[green]\n!!!!!!!\nFINISHED PROCESSING DIALOGUE.\nREADY FOR NEXT INPUT\n!!!!!!!\n")
     
